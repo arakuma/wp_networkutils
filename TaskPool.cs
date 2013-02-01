@@ -188,7 +188,7 @@ namespace Arakuma.NetworkUtil {
                 httpTask = new PostTextHttpTask( item.Url, item.PostData );
             }
             else {
-                //httpTask = new FileUploadHttpTask( item.Url, item.PostData, item.FileData, item.FileFieldName, item.FileName );
+                httpTask = new FileUploadHttpTask( item.Url, item.PostData, item.FileData, item.FileFieldName, item.FileName );
             }
             httpTask.OnHttpRequestCompleted += ( state, stream, error ) => {
                 // first clean up the task pool internally
